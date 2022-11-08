@@ -40,7 +40,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-
 /**
  * Scans for Bluetooth Low Energy Advertisements matching a filter and displays them to the user.
  */

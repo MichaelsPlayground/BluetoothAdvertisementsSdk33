@@ -12,5 +12,22 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+    </style>
+    <style name="Theme.BluetoothAdvertisements.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.BluetoothAdvertisements.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.BluetoothAdvertisements.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="detailsText" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="buttonText" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textColor">@color/white</item>
     </style>
 </resources>

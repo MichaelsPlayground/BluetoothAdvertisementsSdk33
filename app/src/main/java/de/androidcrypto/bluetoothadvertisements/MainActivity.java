@@ -16,6 +16,8 @@
 
 package de.androidcrypto.bluetoothadvertisements;
 
+import static com.google.android.material.internal.ContextUtils.getActivity;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -28,14 +30,18 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 /**
  * Setup display fragments and ensure the device supports Bluetooth.
  */
-public class MainActivity extends FragmentActivity {
+//public class MainActivity extends FragmentActivity {
+public class MainActivity extends AppCompatActivity {
 
     private BluetoothAdapter mBluetoothAdapter;
 
@@ -69,6 +75,9 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.main_toolbar);
+        setSupportActionBar(myToolbar);
+        FragmentManager manager=this.getSupportFragmentManager();
 
         requestBlePermissions(this, PERMISSIONS_REQUEST_CODE);
 
